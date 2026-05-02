@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800;900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Manrope", ui-sans-serif, system-ui, sans-serif;
+  
+  --color-brand-primary: #4f46e5; /* indigo-600 */
+  --color-brand-primary-dark: #3730a3; /* indigo-800 */
+  --color-brand-success: #10b981; /* emerald-500 */
+  --color-brand-surface: #f8fafc; /* slate-50 */
+  --color-brand-on-surface: #0f172a; /* slate-900 */
+  --color-brand-on-surface-variant: #64748b; /* slate-500 */
+  --color-brand-outline-variant: #e2e8f0; /* slate-200 */
+
+  --radius-2xl: 1rem;
+  --radius-3xl: 1.5rem;
+  --radius-4xl: 2rem;
+}
+
+@layer base {
+  body {
+    @apply bg-brand-surface text-brand-on-surface font-sans antialiased;
+  }
+}
+
+.sleek-card {
+  @apply bg-white border border-brand-outline-variant rounded-4xl shadow-sm;
+}
+
+.sleek-nav-active {
+  @apply text-brand-primary bg-brand-primary/5 rounded-2xl;
+}
+
+.sleek-toggle-active {
+  @apply bg-brand-primary shadow-sm;
+}
