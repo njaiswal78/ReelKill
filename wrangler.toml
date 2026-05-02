@@ -1,0 +1,11 @@
+# Cloudflare Pages — ReelKill marketing site → https://focusshield-pro.pages.dev/
+#
+# Deploy:
+#     npm run build:web
+#     npx wrangler pages deploy dist --project-name focusshield-pro
+#
+# Pages dashboard: project "focusshield-pro" (or add a custom domain).
+
+name = "focusshield-pro"
+compatibility_date = "2025-05-01"
+pages_build_output_dir = "dist"
