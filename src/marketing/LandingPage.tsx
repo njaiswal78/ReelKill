@@ -1,7 +1,7 @@
 /**
  * Marketing site for **ReelKill** (Chrome extension + `reelkill` npm/workspace name).
  *
- * Live site: https://focusshield-pro.pages.dev/
+ * Live site: https://kill.unreel.lol/
  *
  * Deploy to Cloudflare Pages (see wrangler.toml). Static only — settings live in
  * the user's browser via chrome.storage.
@@ -27,10 +27,11 @@ import {
   PlayCircle,
 } from 'lucide-react';
 
-// Replace with your real listing URL once live on Chrome Web Store.
 const CHROME_STORE_URL =
-  'https://chromewebstore.google.com/search/reelkill%20shorts%20reels%20blocker';
-const GITHUB_URL = 'https://github.com/'; // TODO: replace with your repo
+  'https://chromewebstore.google.com/detail/plodaddhcjglcdbnoanjlbpadmhkdhbb?utm_source=item-share-cb';
+const GITHUB_URL = 'https://github.com/njaiswal78/ReelKill';
+/** Hosted policy for Chrome Web Store (also in `public/privacy.html` → `dist/`). */
+const PRIVACY_POLICY_URL = '/privacy.html';
 
 export default function LandingPage() {
   return (
@@ -96,10 +97,10 @@ function Hero() {
           </div>
 
           <h1 className="text-5xl md:text-6xl font-black tracking-tighter leading-[1.05] text-slate-900">
-            The infinite scroll stops
+            Scroll stops.
             <br />
             <span className="bg-gradient-to-r from-indigo-600 via-violet-600 to-indigo-500 bg-clip-text text-transparent">
-              — before your night does.
+              Night stays.
             </span>
           </h1>
 
@@ -438,11 +439,19 @@ function Footer() {
           <span className="text-slate-300">·</span>
           <span>© {new Date().getFullYear()}</span>
         </div>
-        <div className="flex items-center gap-5 font-medium">
-          <a href={GITHUB_URL} className="hover:text-slate-900 transition" target="_blank" rel="noreferrer">
+        <div className="flex flex-wrap justify-center gap-5 font-medium">
+          <a href={PRIVACY_POLICY_URL} className="hover:text-slate-900 transition">
+            Privacy policy
+          </a>
+          <a
+            href={GITHUB_URL}
+            className="hover:text-slate-900 transition"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
             GitHub
           </a>
-          <a href={CHROME_STORE_URL} className="hover:text-slate-900 transition" target="_blank" rel="noreferrer">
+          <a href={CHROME_STORE_URL} className="hover:text-slate-900 transition" target="_blank" rel="noreferrer noopener">
             Chrome Web Store
           </a>
         </div>
